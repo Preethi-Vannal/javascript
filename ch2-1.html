@@ -8,11 +8,20 @@
 </head>
 <body>
    <script>
-    const findFreq = (str, char) => {
+    findFreq = (str,char) => {
+        let count=0;
+        for(let i=0; i<str.length ; i++){
+            if(str[i]==char || str[i]==char.toUpperCase()){
+                count=count+1;
+            }
+        }
+        console.log(count);
+    }    
+    /*const findFreq = (str, char) => {
         const re = new RegExp(char, 'gi');
         const  count = str.match(re).length;
         console.log(count);
-    }
+    }*/
     let str=window.prompt("enter a string");
     let char=window.prompt("enter a character you want to search");
     findFreq(str,char);
